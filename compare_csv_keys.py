@@ -181,9 +181,9 @@ def main():
     a_base = os.path.splitext(os.path.basename(path_a))[0]
     b_base = os.path.splitext(os.path.basename(path_b))[0]
     out_dir = os.path.dirname(os.path.abspath(__file__))
-    out_common = os.path.join(out_dir, f"Спільні {a_base} {b_base}.csv")
-    out_a_only = os.path.join(out_dir, f"Лише {a_base}.csv")
-    out_b_only = os.path.join(out_dir, f"Лише {b_base}.csv")
+    out_common = os.path.join(out_dir, f"Common {a_base} {b_base}.csv")
+    out_a_only = os.path.join(out_dir, f"Only {a_base}.csv")
+    out_b_only = os.path.join(out_dir, f"Only {b_base}.csv")
 
     def write_only(path_out: str, header: Optional[List[str]], entries: List[Tuple[str, List[str]]], allowed_suffixes: Set[str]):
         with open(path_out, "w", newline="", encoding="utf-8") as f:
